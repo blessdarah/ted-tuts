@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin-left: 2.5rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 20px;
+}
+
+/* Target direct header children of main tag */
+main>header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 
+* Group heading together 
+* and give the same styles 
+* */
+h1,
+h2,
+h3,
+label {
+    color: orangered;
+    margin: 10px 0;
+}
+
+/* Target element with id = name */
+#name {
+    border: 1px solid red;
+    margin-bottom: 20px;
+}
+
+/* target element with class = button */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-danger {
+    background-color: #dc3545;
+}
+
+.button-success {
+    background-color: #28a745;
+}
+
+input+label {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* targe ul that is a sibling to label */
+/* label~ul { */
+/*     list-style-type: none; */
+/*     padding: 0; */
+/* } */
+
+.button-rounder {
+    border-radius: 15px;
+}
