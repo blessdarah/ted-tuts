@@ -1,79 +1,84 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-ul,
-ol {
-    list-style-type: none;
-    margin-left: 2.5rem;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     color: #333;
-    font-size: 14px;
-    line-height: 1.4;
-    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 2rem;
 }
 
-/* Target direct header children of main tag */
-main>header {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+
+input:focus-within {
+    outline: none;
+    border: 2px solid #007BFF;
+    box-shadow: 0 0 8px inset #ccc;
 }
 
-/* 
-* Group heading together 
-* and give the same styles 
-* */
-h1,
-h2,
-h3,
-label {
-    color: orangered;
-    margin: 10px 0;
+label[for*="gender"] {
+    color: green;
 }
 
-/* Target element with id = name */
-#name {
-    border: 1px solid red;
-    margin-bottom: 20px;
-}
-
-/* target element with class = button */
-.button {
-    background-color: #007bff;
+*[type="submit"] {
+    background: blue;
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
 }
 
-.button-danger {
-    background-color: #dc3545;
+a[href] {
+    color: orange;
 }
 
-.button-success {
-    background-color: #28a745;
+ul[class="qualifications"] li:first-child {
+    background: yellow;
 }
 
-input+label {
-    color: #007bff;
+ul[class="qualifications"] li:last-child {
+    background: orange;
+}
+
+thead tr {
+    background-color: lightblue;
     font-weight: bold;
-    font-size: 0.8rem;
 }
 
-/* targe ul that is a sibling to label */
-/* label~ul { */
-/*     list-style-type: none; */
-/*     padding: 0; */
-/* } */
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
 
-.button-rounder {
-    border-radius: 15px;
+a:visited {
+    color: green;
+    text-decoration: underline;
+}
+
+button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+button:active {
+    background: maroon;
+    transform: scale(0.95);
+}
+
+input,
+textarea {
+    border: 2px solid #ccc;
+    background: green;
+    padding: 4px;
+    border-radius: 4px;
 }
