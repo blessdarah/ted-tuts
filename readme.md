@@ -33,6 +33,8 @@
 * HSLA colors (hsla(h, s%, l%, a))
 * Named colors (red, blue, green, etc.)
 * CSS variables (var(--variable-name))
+
+/*TODO: handle in next class before or after git lesson*/
 * CSS functions (calc(), min(), max(), clamp())
 * CSS gradients (linear-gradient(), radial-gradient(), conic-gradient())
 * CSS color functions (color(), color-mix(), color-contrast())

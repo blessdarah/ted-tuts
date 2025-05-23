@@ -1,3 +1,8 @@
+/* normalize css */
+@import url("./css/color.css");
+@import url("./css/product-card.css");
+/* spacing and sizes */
+
 * {
     margin: 0;
     padding: 0;
@@ -56,16 +61,60 @@ tbody tr:nth-child(odd) {
 
 
 button {
-    background: red;
-    color: white;
+    background: var(--color-base);
+    color: #000;
     border: none;
-    padding: 10px 20px;
+    border: 2px dotted #000;
+    padding: 0.4rem 1.4rem;
+    /* border-radius: 4px; */
     cursor: pointer;
+    margin-bottom: 1rem;
+
+    &:active {
+        background: hsl(150, 30%, 70%);
+    }
+
+    &.success {
+        background: hsl(280, 30%, 80%);
+
+        &:hover {
+            background: hsl(280, 30%, 60%);
+        }
+
+        &:active {
+            background: hsl(280, 30%, 70%);
+        }
+    }
+
+    &.warning {
+        background: hsl(20, 30%, 80%);
+
+        &:hover {
+            background: hsl(20, 30%, 60%);
+        }
+
+        &:active {
+            background: hsl(20, 30%, 70%);
+        }
+    }
+
+    &.danger {
+        background: hsl(80, 30%, 80%);
+
+        &:hover {
+            background: hsl(80, 30%, 60%);
+        }
+
+        &:active {
+            background: hsl(80, 30%, 70%);
+        }
+    }
 }
 
-button:hover {
-    background: darkred;
+button+button {
+    margin-left: 10px;
 }
+
 
 button[disables=false]:active {
     background: maroon;
@@ -133,7 +182,7 @@ section.blog-posts>article a:hover {
 }
 
 section.blog-posts>article a:active {
-    color: #0056b3;
+    color: var(--color-success);
 }
 
 input:focus:valid {
