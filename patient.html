@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ted | Patient registration</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./patient.html" class="is-active">Patient registration</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./settings.html">Settings</a>
+        </nav>
+    </header>
+
+    <section class="patient-form">
+        <h1>Patient registration</h1>
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" minlength="8" required />
+            </div>
+            <div>
+                <label for="dob">Date of birth:</label>
+                <input type="date" id="dob" max="2010-12-31" required />
+            </div>
+            <div>
+                <label for="contact-number">Contact number:</label>
+                <input type="tel" id="contact-number" />
+            </div>
+            <div>
+                <label for="email">Email address:</label>
+                <input type="email" id="email" required />
+            </div>
+            <div>
+                <label for="height">What is your estimated height?</label>
+                <input type="range" id="height" list="tickmarks" min="0" max="300" required />
+                <datalist id="tickmarks">
+                    <option value="0" label="0"></option>
+                    <option value="50" label="50"></option>
+                    <option value="100" label="100"></option>
+                    <option value="150" label="150"></option>
+                    <option value="200" label="200"></option>
+                    <option value="250" label="250"></option>
+                    <option value="300" label="300"></option>
+                </datalist>
+                <output id="range-output"></output>
+            </div>
+            <div>
+                <span>Gender: </span>
+
+                <input type="radio" name="gender" value="male" id="male-gender" />
+                <label for="male-gender">Male</label>
+
+                <input type="radio" name="gender" value="female" id="female-gender" />
+                <label for="female-gender">Female</label>
+            </div>
+
+            <div>
+                <label for="region">Region of origin: </label>
+                <select id="region" name="region">
+                    <option value="none">Select a region</option>
+                    <option value="nw">North West</option>
+                    <option value="sw">South West</option>
+                    <option value="ea">East</option>
+                    <option value="ce">Center</option>
+                    <option value="li">Litoral</option>
+                    <option value="we">West</option>
+                    <option value="so">South</option>
+                    <option value="ad">Adamawa</option>
+                    <option value="fn">Far North</option>
+                    <option value="no">North</option>
+                </select>
+            </div>
+
+            <h3>Qualifications and Address info</h3>
+            <div>
+                <p>List of qualifications</p>
+                <!-- checkboxes for list of qualifications -->
+                <ul class="qualifications">
+                    <li>
+                        <input type="checkbox" id="first-school" name="qualifications" value="fs" />
+                        <label for="first-school">First school Leaving certificate</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ord-level" name="qualifications" value="ol" />
+                        <label for="ord-level">Ordinary level</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="adv-level" name="qualifications" value="al" />
+                        <label for="adv-level">Advanced level</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="undergraduate" name="qualifications" value="ug" />
+                        <label for="undergraduate">Undergraduate</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="masters" name="qualifications" value="ms" />
+                        <label for="masters">Masters</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="phd" name="qualifications" value="phd" />
+                        <label for="phd">PhD</label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <label for="med-his">Do you have a medical history?: </label>
+                <input type="radio" id="med-his-yes" name="med-his" value="yes" />
+                <label for="med-his-yes">Yes</label>
+
+                <input type="radio" id="med-his-no" name="med-his" value="no" />
+                <label for="med-his-no">No</label>
+            </div>
+            <div>
+                <label for="med-issues">State your current medical issues:</label><br />
+                <textarea id="med-issues" name="med-issues" cols="30" rows="4"></textarea>
+            </div>
+            <input type="submit" value="Register patient" />
+        </form>
+    </section>
+
+    <script>
+        const rangeInput = document.getElementById("height");
+        const rangeOutput = document.getElementById("range-output");
+
+        rangeInput.addEventListener("input", function () {
+            rangeOutput.value = this.value;
+        });
+    </script>
+</body>
+
+</html>

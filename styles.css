@@ -1,0 +1,211 @@
+/* normalize css */
+@import url("./css/color.css");
+@import url("./css/product-card.css");
+/* spacing and sizes */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 2rem;
+}
+
+
+input:focus-within {
+    outline: none;
+    border: 2px solid #007BFF;
+    box-shadow: 0 0 8px inset #ccc;
+}
+
+nav>a:not(.is-active) {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+*[type="submit"] {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+a[href] {
+    color: orange;
+}
+
+ul.qualifications li:first-child {
+    background: yellow;
+}
+
+ul[class="qualifications"] li:last-child {
+    background: orange;
+}
+
+thead tr {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+
+button {
+    background: var(--color-base);
+    color: #000;
+    border: none;
+    border: 2px dotted #000;
+    padding: 0.4rem 1.4rem;
+    /* border-radius: 4px; */
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+    &:active {
+        background: hsl(150, 30%, 70%);
+    }
+
+    &.success {
+        background: hsl(280, 30%, 80%);
+
+        &:hover {
+            background: hsl(280, 30%, 60%);
+        }
+
+        &:active {
+            background: hsl(280, 30%, 70%);
+        }
+    }
+
+    &.warning {
+        background: hsl(20, 30%, 80%);
+
+        &:hover {
+            background: hsl(20, 30%, 60%);
+        }
+
+        &:active {
+            background: hsl(20, 30%, 70%);
+        }
+    }
+
+    &.danger {
+        background: hsl(80, 30%, 80%);
+
+        &:hover {
+            background: hsl(80, 30%, 60%);
+        }
+
+        &:active {
+            background: hsl(80, 30%, 70%);
+        }
+    }
+}
+
+button+button {
+    margin-left: 10px;
+}
+
+
+button[disables=false]:active {
+    background: maroon;
+    transform: scale(0.95);
+}
+
+input,
+textarea {
+    border: 2px solid #ccc;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+input[disabled],
+button[disabled] {
+    margin: 10px 0;
+    background: #f0f0f0;
+    border: 2px solid #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+
+section.blog-posts>article {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+section.blog-posts>article:first-child {
+    background: orange;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    p {
+        color: #333;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 100%;
+    }
+}
+
+section.blog-posts>article h3 {
+    color: #333;
+}
+
+section.blog-posts>article p {
+    color: #666;
+}
+
+section.blog-posts>article a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 75%;
+}
+
+ul.qualifications>li:not(:first-child) {
+    background: lightblue;
+}
+
+section.blog-posts>article a:hover {
+    text-decoration: underline;
+}
+
+section.blog-posts>article a:active {
+    color: var(--color-success);
+}
+
+input:focus:valid {
+    border: 2px solid green;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    gap: .5rem;
+
+    label {
+        flex-basis: 7.5rem;
+        text-align: right;
+    }
+
+
+    input {
+        margin: 0;
+    }
+}
