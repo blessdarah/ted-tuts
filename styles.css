@@ -192,3 +192,20 @@ input:focus:valid {
 input:invalid {
     border: 2px solid red;
 }
+
+.form-group {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    gap: .5rem;
+
+    label {
+        flex-basis: 7.5rem;
+        text-align: right;
+    }
+
+
+    input {
+        margin: 0;
+    }
+}
