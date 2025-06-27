@@ -34,7 +34,7 @@
 * Named colors (red, blue, green, etc.)
 * CSS variables (var(--variable-name))
 
-/*TODO: handle in next class before or after git lesson*/
+### This has alredy been handled.
 * CSS functions (calc(), min(), max(), clamp())
 * CSS gradients (linear-gradient(), radial-gradient(), conic-gradient())
 * CSS color functions (color(), color-mix(), color-contrast())
